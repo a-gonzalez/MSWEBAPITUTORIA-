@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="utf-8" />
+<title>CRUD Tester</title>
+
+<link rel="stylesheet" href="styles/index.css" />
+
+</head>
+<body>
+
+<h1>CRUD Tester</h1>
+
+<h3>Add Item</h3>
+<form action="javascript:void(0);" method="post" onsubmit="AddItem()">
+    <input type="text" id="add-name" placeholder="New item..." />
+    <input type="submit" value="Add" />
+</form>
+
+<div id="spoiler">
+    <h3>Edit</h3>
+    <form class="my-form">
+        <input type="hidden" id="edit-id" />
+        <input type="checkbox" id="edit-isComplete" />
+        <input type="text" id="edit-name" />
+        <input type="submit" value="Edit" />
+        <a onclick="closeInput()" arial-label="Close" />&#10006</a>
+    </form>
+</div>
+
+<p id="counter"></p>
+
+<table>
+    <tr>
+        <th>Is Complete</th>
+        <th>
+            Name
+        </th>
+        <th>
+        </th>
+        <th>
+        </th>
+    </tr>
+    <tbody id="items">
+    </tbody>
+</table>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="scripts/index.js"></script>
+</body>
+</html>

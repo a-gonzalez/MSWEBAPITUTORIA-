@@ -42,8 +42,7 @@ namespace TodoApi.Controllers
 			{
 				return NotFound();
 			}
-
-			return item;
+			return Ok(item);
 		}
 
 		[HttpPost]
@@ -63,7 +62,6 @@ namespace TodoApi.Controllers
 			{
 				return BadRequest();
 			}
-
 			_context.Entry(item).State = EntityState.Modified;
 
 			await _context.SaveChangesAsync();
@@ -84,7 +82,7 @@ namespace TodoApi.Controllers
 
 			await _context.SaveChangesAsync();
 
-			return item;
+			return Ok(item);
 		}
     }
 }
